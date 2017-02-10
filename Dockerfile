@@ -9,6 +9,6 @@ CMD clear
 CMD echo -e "\n\n************************************";echo "* Your container IP is: $ip *"
 CMD echo "* Port: 3128                       *"; echo -e "************************************\n\n\n"
 CMD echo "Press any key to continue"
-CMD read
+CMD read -n1
 CMD squid;clear
 CMD tail -f /var/log/squid/access.log
