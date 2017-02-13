@@ -4,6 +4,7 @@ MAINTAINER Abraham Bribiesca
 
 RUN yum update -y
 RUN yum -y install squid net-tools
+RUN yum clean all
 CMD ip=$(ifconfig |head -2|grep inet|cut -d" " -f10)
 CMD clear
 CMD echo -e "\n\n************************************";echo "* Your container IP is: $ip *"
