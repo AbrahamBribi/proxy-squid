@@ -2,6 +2,7 @@ FROM centos
 
 MAINTAINER Abraham Bribiesca
 
+RUN curl -o /etc/yum.repos.d/squid.repo https://raw.githubusercontent.com/AbrahamBribi/proxy-squid/master/squid.repo
 RUN yum update -y
 RUN yum -y install squid net-tools
 RUN yum clean all
