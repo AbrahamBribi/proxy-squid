@@ -12,5 +12,7 @@ CMD echo -e "\n\n************************************";echo "* Your container IP
 CMD echo "* Port: 3128                       *"; echo -e "************************************\n\n\n"
 CMD echo "Press any key to continue"
 CMD read -n1
+CMD touch /etc/squid/forbidden.lst
+CMD curl -o /etc/squid/squid.conf https://raw.githubusercontent.com/AbrahamBribi/proxy-squid/master/squid.conf
 CMD squid;clear
 CMD tail -f /var/log/squid/access.log
